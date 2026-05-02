@@ -152,6 +152,121 @@ textarea:focus {
   transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1), filter 900ms ease;
 }
 
+.reveal-section.mobile-reveal-only {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 767px) {
+  @keyframes mobile-hero-rise {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+      filter: blur(3px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+
+  .hero-rise {
+    animation-name: mobile-hero-rise;
+    animation-duration: 860ms;
+  }
+
+  .hero-delay-1 {
+    animation-delay: 90ms;
+  }
+
+  .hero-delay-2 {
+    animation-delay: 190ms;
+  }
+
+  .hero-delay-3 {
+    animation-delay: 290ms;
+  }
+
+  .hero-delay-4 {
+    animation-delay: 390ms;
+  }
+
+  .hero-delay-5 {
+    animation-delay: 490ms;
+  }
+
+  .hero-delay-6 {
+    animation-delay: 590ms;
+  }
+
+  .reveal-section {
+    transform: translateY(18px);
+    transition:
+      opacity 760ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 760ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal-section.mobile-reveal-only {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  .reveal-section.reveal-visible,
+  .reveal-section.mobile-reveal-only.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-section .image-polish {
+    transform: scale(1.012);
+    filter: saturate(0.98);
+  }
+
+  .reveal-section.reveal-visible .image-polish {
+    transform: scale(1.001);
+    filter: saturate(1);
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  a,
+  button,
+  article,
+  .rounded-\[1\.2rem\],
+  .rounded-\[1\.4rem\],
+  .rounded-\[1\.5rem\],
+  .rounded-\[1\.6rem\],
+  .rounded-\[1\.8rem\],
+  .rounded-\[2rem\] {
+    -webkit-tap-highlight-color: transparent;
+    transition:
+      transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+      filter 220ms ease,
+      box-shadow 260ms cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 260ms ease,
+      background-color 260ms ease;
+  }
+
+  a:active,
+  button:active {
+    transform: scale(0.98);
+    filter: brightness(1.02);
+  }
+
+  article:active,
+  .rounded-\[1\.2rem\]:active,
+  .rounded-\[1\.4rem\]:active,
+  .rounded-\[1\.5rem\]:active,
+  .rounded-\[1\.6rem\]:active,
+  .rounded-\[1\.8rem\]:active,
+  .rounded-\[2rem\]:active {
+    transform: scale(0.99);
+    filter: brightness(1.015);
+  }
+}
+
 @media (hover: hover) {
   a,
   button {

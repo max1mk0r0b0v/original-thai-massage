@@ -10,7 +10,7 @@ type OpeningHoursSectionProps = {
 
 export function OpeningHoursSection({ config }: OpeningHoursSectionProps) {
   return (
-    <SectionShell id="hours" disableReveal>
+    <SectionShell id="hours" disableReveal mobileReveal>
       <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <div className="rounded-[2rem] border border-[var(--site-border)] bg-white/75 p-7 shadow-[0_18px_44px_rgba(80,56,35,0.08)] sm:p-9">
           <SectionHeading

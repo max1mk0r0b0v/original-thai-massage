@@ -12,7 +12,7 @@ type BookingSectionProps = {
 
 export function BookingSection({ config }: BookingSectionProps) {
   return (
-    <SectionShell id="contact" disableReveal>
+    <SectionShell id="contact" disableReveal mobileReveal>
       <div className="grid gap-6 xl:grid-cols-[0.9fr_1.1fr]">
         <div className="rounded-[2rem] border border-[var(--site-border)] bg-white/78 p-6 shadow-[0_18px_44px_rgba(80,56,35,0.08)] sm:p-8">
           <SectionHeading

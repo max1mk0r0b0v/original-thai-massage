@@ -11,7 +11,7 @@ type FooterSectionProps = {
 
 export function FooterSection({ config }: FooterSectionProps) {
   return (
-    <SectionShell className="pb-8 pt-4" disableReveal>
+    <SectionShell className="pb-8 pt-4" disableReveal mobileReveal>
       <footer className="grid gap-8 rounded-[2rem] border border-[var(--site-border)] bg-white/82 p-6 shadow-[0_18px_44px_rgba(80,56,35,0.08)] sm:p-8 lg:grid-cols-[1fr_auto] lg:items-end">
         <div>
           <BrandLockup config={config} size="md" />
